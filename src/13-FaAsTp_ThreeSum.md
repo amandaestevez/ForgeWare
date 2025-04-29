@@ -34,7 +34,7 @@ public class ThreeSum { // Define the class where the solution will be stored.
             if (i > 0 && nums[i] == nums[i - 1]) continue; // Skip "i" duplicates. We need unique triplets. Only works if the array is sorted.
             int left = i + 1, right = nums.length - 1; // Initialize two pointer at the two extremes of the array.
             while (left < right) { // Moves pointers left and right until they meet.
-                int sum = nums[i] + nums[left] + nums[right]; // Sum the index and the two pointers.
+                int sum = nums[i] + nums[left] + nums[right]; // sum the **values** at these positions.
 
                 if (sum == 0) { // Check for a valid triplet
                     result.add(Arrays.asList(nums[i], nums[left], nums[right])); // Store in the result list.
